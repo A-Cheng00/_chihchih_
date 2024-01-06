@@ -8,7 +8,7 @@ def connect():
     # enable station interface and connect to WiFi access point
     nic = network.WLAN(network.STA_IF)
     nic.active(True)
-    nic.connect('Robert_iPhone', '0926656000')
+    nic.connect('Pixel_7849', '10102222')
 
     max_wait = 10
 
@@ -49,7 +49,7 @@ def alert(t:float):
     minites = date_tuple[5]
     second = date_tuple[6]
     date_str = f'{year}-{month}-{day} {hour}:{minites}:{second}'
-    response = requests.get(f'https://自已的?name=pico_我家雞場&date={date_str}&temperature={t}')
+    response = requests.get(f'https://https://hook.eu2.make.com/ai5xrc3p4jtfx6t8akj3enga8xlmgb4s?name=pico_我家雞場&date={date_str}&temperature={t}')
     response.close()
     
 def callback1(t:Timer):

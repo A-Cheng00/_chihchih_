@@ -41,7 +41,7 @@ def connect():
 def alert():
     print('要爆炸了!')
     
-    response = requests.get('https://https://hook.eu2.make.com/ai5xrc3p4jtfx6t8akj3enga8xlmgb4s?name=pico&date=2024-01-06-14:05&temperature=28.54')
+    response = requests.get('https://hook.eu2.make.com/ai5xrc3p4jtfx6t8akj3enga8xlmgb4s?name=pico&date=2024-01-06-14:05&temperature=28.54')
     print(help(response))
     response.close()
     
