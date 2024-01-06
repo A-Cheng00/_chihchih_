@@ -1,5 +1,6 @@
 import network
 import time
+from machine import WDT,Timer,ADC
 
 def connect():
     nic=network.WLAN(network.STA_IF)
