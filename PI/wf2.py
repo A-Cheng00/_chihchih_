@@ -1,6 +1,7 @@
 import network
 import time
 from machine import WDT,Timer,ADC
+import ureguests as request
 
 def connect():
     nic=network.WLAN(network.STA_IF)
@@ -34,6 +35,9 @@ import time
 
 def alert():
     print('要爆炸了!')
+    response=requests.get("")
+    print(help(response))
+    response.close()
     
 def callback1(t:Timer):
     global start
