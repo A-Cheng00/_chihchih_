@@ -49,19 +49,19 @@ def alert(t:float):
     minites = date_tuple[5]
     second = date_tuple[6]
     date_str = f'{year}-{month}-{day} {hour}:{minites}:{second}'
-    response = requests.get(f'https://https://hook.eu2.make.com/ai5xrc3p4jtfx6t8akj3enga8xlmgb4s?name=pico_我家雞場&date={date_str}&temperature={t}')
+    response = requests.get(f'https://hook.eu2.make.com/ai5xrc3p4jtfx6t8akj3enga8xlmgb4s?name=pico_我家雞場&date={date_str}&temperature={t}')
     response.close()
     
 def callback1(t:Timer):
     global start
     sensor = ADC(4)    
     vol = sensor.read_u16() * (3.3/65535)
-    temperature = 40 - (vol-0.706) / 0.001721
+    temperature = 27 - (vol-0.706) / 0.001721
     print(f'溫度:{temperature}')    
     delta = time.ticks_diff(time.ticks_ms(), start)
     print(delta)
     #溫度超過24度,並且發送alert()的時間已經大於60秒
-    if temperature >= 35 and delta >= 60 * 1000:        
+    if temperature >= 29 and delta >= 60 * 1000:        
         alert(temperature)
         start = time.ticks_ms()#重新設定計時的時間
         
