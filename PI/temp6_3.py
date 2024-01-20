@@ -26,8 +26,8 @@ def connect():
     #沒有wifi的處理
     if nic.status() != 3:
         #連線失敗,重新開機
-        #wdt = WDT(timeout=2000)
-        #wdt.feed()
+        wdt = WDT(timeout=2000)
+        wdt.feed()
         raise RuntimeError('連線失敗')
         
     else:
