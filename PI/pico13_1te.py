@@ -1,7 +1,7 @@
 from machine import Pin
 import time
 import urequests as requests
-from tools import connect,reconnect
+#from tools import connect,reconnect
 
 red_led = Pin(15,mode=Pin.OUT)
 btn = Pin(14,mode=Pin.PULL_DOWN)
@@ -25,9 +25,9 @@ def btn_detect(btn1):
             is_press = False
             try:
                 if led_status == True:
-                    get_url = 'https://blynk.cloud/external/api/update?token=您自已的&v0=1'
+                    get_url = 'https://blynk.cloud/external/api/update?token=sk3fTHgDtabGCPLQa0R13fB7KXRBMKH6&v0=1'
                 else:
-                    get_url = 'https://blynk.cloud/external/api/update?token=您自已的&v0=0'
+                    get_url = 'https://blynk.cloud/external/api/update?token=sk3fTHgDtabGCPLQa0R13fB7KXRBMKH6&v0=0'
                 response = requests.get(get_url)
             except:
                 reconnect()
@@ -41,7 +41,7 @@ def btn_detect(btn1):
                 response.close()
     
 
-connect()
+#connect()
 while True:
     btn_detect(btn)
     
