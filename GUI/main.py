@@ -1,20 +1,6 @@
 import streamlit as st
 import pandas as pd
 
-st.title("Pico_W_職能發展協會專案")
-st.header("雞舍:red[溫度]和:blue[光線]狀態")
+st.title("PP ")
+st.header("雞舍 :blue[溫度]& :red[光線]")
 st.divider()
-
-"""
-# My first app
-Here's our first attempt at using data to create a table:
-"""
-
-import streamlit as st
-import pandas as pd
-df = pd.DataFrame({
-  'first column': [1, 2, 3, 4],
-  'second column': [10, 20, 30, 40]
-})
-
-df
